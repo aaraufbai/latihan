@@ -18,13 +18,14 @@ while ($d = mysqli_fetch_array($data)) {
                     <h1>Edit Data</h1>
                 </div>
                 <form action="edit-act.php" method="post">
+                    <input type="text" name="id" value="<?= $d['id'] ?>" hidden> 
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="username" value="<?= $d['username']; ?>" name="username" placeholder="Username">
+                        <input type="text" class="form-control" name="username" value="<?= $d['username'] ?>" placeholder="Username">
                     </div>
                     <div class="mb-3">
-                        <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+                        <input type="password" class="form-control" name="password" placeholder="Password">
                     </div>
-                    <select class="form-select" name="level"  value="<?= $d['level']; ?>" aria-label="Default select example">
+                    <select class="form-select" name="level" aria-label="Default select example">
                 
                         <option value="user">user</option>
                         <option value="admin">admin</option>

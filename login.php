@@ -13,6 +13,6 @@
         $_SESSION['username'] = $username;
         header('location:tampildata.php');
     }else{
-        header("location:index.php?pesan=gagal");
+        header("location:index.php?data=gagal");
     }
 ?>

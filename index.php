@@ -1,9 +1,9 @@
 <?php
 session_start();
-if(isset($_SESSION['status'])){
+if (isset($_SESSION['status'])) {
     session_destroy();
     session_unset();
-    $_SESSION=[''];
+    $_SESSION = [''];
 }
 
 require 'header.php';
@@ -28,10 +28,10 @@ require 'header.php';
                 }
                 ?>
                 <div class="mb-3">
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                    <input type="text" class="form-control" name="username" placeholder="Username">
                 </div>
                 <div class="mb-3">
-                    <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+                    <input type="password" class="form-control" name="password" placeholder="Password">
                 </div>
                 <button type="submit" class="btn btn-primary col-12">Submit</button>
             </form>
